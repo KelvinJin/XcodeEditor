@@ -345,7 +345,7 @@
 //-------------------------------------------------------------------------------------------
 #pragma mark Members
 
-- (NSArray<id <XcodeGroupMember>> *)members
+- (NSArray*)members
 {
     if (_members == nil) {
         _members = [[NSMutableArray alloc] init];
