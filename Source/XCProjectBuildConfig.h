@@ -32,6 +32,7 @@
 - (void)addBuildSettings:(NSDictionary*)buildSettings;
 
 - (void)addOrReplaceSetting:(id <NSCopying>)setting forKey:(NSString*)key;
+- (void)removeSettingForKey:(NSString*)key;
 
 - (id <NSCopying>)valueForKey:(NSString*)key;
 

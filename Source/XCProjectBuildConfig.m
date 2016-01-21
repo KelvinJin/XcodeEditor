@@ -150,6 +150,15 @@
     [_project.objects setValue:dict forKey:_key];
 }
 
+- (void)removeSettingForKey:(NSString*)key
+{
+    [_buildSettings removeObjectForKey:key];
+    
+    NSMutableDictionary* dict = [[[_project objects] objectForKey:_key] mutableCopy];
+    [dict setValue:_buildSettings forKey:@"buildSettings"];
+    [_project.objects setValue:dict forKey:_key];
+}
+
 
 - (id <NSCopying>)valueForKey:(NSString*)key
 {
